@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+
+}
+
+task deleteJar(type: Delete) {
+    delete 'libs/myapp_live.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/aar_main_jar/release/')
+    into('libs/')
+    include('classes.jar')
+    rename('classes.jar', 'myapp_live.jar')
+}
+
+createJar.dependsOn(deleteJar, build)
