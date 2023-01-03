@@ -12,8 +12,8 @@
         parent="@style/Theme.AppCompat.Light.DarkActionBar"
     -->
     <style name="_Paynimo" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:buttonStyle">@style/ButtonPaynimo</item>
-        <item name="android:editTextStyle">@style/EditTextPaynimo</item>
+        <item name="android:buttonStyle">@style/TextAppearance.AppCompat.Button</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
     </style>
 
 </resources>

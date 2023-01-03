@@ -1,5 +1,13 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'io.github.worldline-deepalimundaye'
+    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_ARTIFACT_ID = 'myapp'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+
 android {
     compileSdkVersion 31
 

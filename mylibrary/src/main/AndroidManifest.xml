@@ -17,7 +17,7 @@
         android:supportsRtl="true">
 
     <activity
-        android:name="com.test.mylibrary.MyClass"
+        android:name="com.test.mylibrary.MyApp"
         android:theme="@style/paynimoUXTheme"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait"

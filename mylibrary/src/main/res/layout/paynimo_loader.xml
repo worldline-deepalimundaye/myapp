@@ -3,13 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/paynimo_backgroundColor">
+    android:background="@android:color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="@color/paynimo_backgroundColor">
+        android:background="@android:color/white">
         <ImageView
             android:id="@+id/paynimo_img_logo"
             android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/paynimo_defaultTextColor"
+            android:textColor="@android:color/black"
             android:layout_below="@id/paynimo_webview"
             android:text="Please Wait..." />
     </RelativeLayout>
